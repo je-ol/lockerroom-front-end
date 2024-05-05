@@ -14,7 +14,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={ !user ? <LogPage setUser={setUser} /> : <ChatsPage user={user} />}  />
-      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/Register" element={<RegisterPage />} />
       <Route path="/Chats" element={<ChatsPage user={user}/>} />
     </Routes>
   );
