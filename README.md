@@ -10,7 +10,7 @@
 
 ## **About The Project**
 ---
-![[Pasted image 20240503155721.png]]
+![](https://i.imgur.com/D0XdjcI.png)
 
 Locker-room is a Full stack Web application project designed to be able to connect and communicate with your team members. You can register an account, login, create lobbies, add people to you lobbies or be added by them to theirs and then chat with anyone in it.
 
