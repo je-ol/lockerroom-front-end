@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import PropTypes from "prop-types";
+
 
 
 const LogPage = ({ setUser }) => {
@@ -47,7 +48,8 @@ const LogPage = ({ setUser }) => {
         <a href="./reset-password" className="text-white font-bold underline drop-shadow-md">Forgot your password?</a>
         <button type="submit" onClick={handleSubmit}
         className="bg-indigo-700 text-white p-2 rounded font-semibold my-6 drop-shadow-md">LOGIN</button>
-        <p className="text-white font-semibold text-center">Not a member yet? <a href="/Register" className="underline text-sky-200">Register</a></p>
+        <p className="text-white font-semibold text-center">Not a member yet? 
+        <Link to="/Register" className="underline text-sky-200">Register</Link></p>
       </form>
         
     </div>
