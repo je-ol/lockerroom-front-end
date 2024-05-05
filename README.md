@@ -59,3 +59,5 @@ If you have any suggestion that would make this better, just fork the repo and c
 ## License:
 Distributed under the MIT License
 
+#### Netlify deployment:
+https://locker-room875.netlify.app
