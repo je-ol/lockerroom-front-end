@@ -82,12 +82,12 @@ const ChatsPage = ({ user }) => {
   return (
     <>
     <NavBar token={token}/>
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-[950px] h-[700px] flex gap-3 rounded-3xl text-white text-center drop-shadow-xl">
-        <div className="titles flex justify-around text-5xl font-bold rotate-180" style={{ writingMode: 'vertical-rl' }}>
+    <div className="w-full h-screen flex justify-center items-center text-xl sm:text-sm">
+      <div className="w-[70%] h-[86%] flex gap-3 rounded-3xl text-white text-center drop-shadow-xl mt-[4%]">
+        <div className="titles flex justify-around text-5xl sm:text-4xl font-bold rotate-180" style={{ writingMode: 'vertical-rl' }}>
             <h2>LOBBIES</h2><h2>MEMBERS</h2>
         </div>
-        <div className=" w-[30%] h-[680px] p-3 rounded-2xl bg-indigo-200/20">
+        <div className=" w-[30%] h-[96%] p-3 rounded-2xl bg-indigo-200/20">
             <div className="h-[49%] mb-[2%] flex flex-col overflow-y-scroll p-2 rounded-xl bg-blue-200/20">
                 {currentLobby && (<MemberList token={token} currentLobby={currentLobby}/>)}
             </div>
@@ -95,7 +95,7 @@ const ChatsPage = ({ user }) => {
             <div className="h-[49%] flex flex-col overflow-y-scroll">
                 {lobbies?.map((lobby) => (
                     <div key={lobby.lobby_id} className="flex flex-col gap-5">
-                        <div className="flex px-6 my-1 pr-5 items-center w-[225px] h-[100px] rounded-xl bg-indigo-800/60 drop-shadow-md cursor-pointer"     onClick={()  => {
+                        <div className="flex px-6 my-1 pr-5 items-center w-[96%] h-[100px] rounded-xl bg-indigo-800/60 drop-shadow-md cursor-pointer"     onClick={()  => {
                         setCurrentLobby(lobby.lobby_id);
                         handleOpenLobby(lobby.lobby_id);
                     }}>
@@ -106,15 +106,15 @@ const ChatsPage = ({ user }) => {
                 ))}
             </div>
         </div>
-        <div className="flex flex-col w-[70%] h-[680px] gap-3 p-3 rounded-2xl bg-indigo-200/10">
+        <div className="flex flex-col w-[70%] h-[96%] gap-3 p-3 rounded-2xl bg-indigo-200/10">
             {currentLobby && (
             <>
-                <div className="flex items-center w-full h-[50px] rounded-xl bg-indigo-200/10 drop-shadow-md lobby-title">
-                    <p className="w-[85%] text-left text-indigo-100 font-bold text-xl ml-5 drop-shadow-md ">{lobbies?.find(lobby => lobby.lobby_id === currentLobby)?.title}</p>
+                <div className="flex items-center w-full h-[10%] rounded-xl bg-indigo-200/10 drop-shadow-md lobby-title">
+                    <p className="w-[85%] text-left text-indigo-100 font-bold text-3xl sm:text-xl ml-5 drop-shadow-md ">{lobbies?.find(lobby => lobby.lobby_id === currentLobby)?.title}</p>
                     <AddUser token={token} currentLobby={currentLobby}/>
                 </div>
-                <div className="flex flex-col justify-end w-full h-[500px] rounded-xl bg-indigo-200/10 drop-shadow-md">
-                    <ScrollToBottom className="flex flex-col h-[490px]">
+                <div className="flex flex-col justify-end w-full h-[72%] rounded-xl bg-indigo-200/10 drop-shadow-md text-lg sm:text-sm">
+                    <ScrollToBottom className="flex flex-col h-[98%]">
                     {allMessages?.map((message, index) => (
                      <div key={index} className={`w-[380px] p-2 m-2 rounded-xl bg-indigo-200/10 drop-shadow-md ${JSON.stringify(message.author) === user ? 'ml-auto bg-emerald-500/20' : 'mr-auto bg-indigo-700/30'}`}>
 
@@ -123,11 +123,11 @@ const ChatsPage = ({ user }) => {
                     ))}
                     </ScrollToBottom>
                 </div>
-                <form className="flex flex-col justify-between w-full h-[100px] rounded-xl drop-shadow-md">
-                    <input type="text" className="w-[full] h-[54px] rounded-xl bg-white/90 text-black text-center" placeholder="Type your message here..." value={newMessage}
+                <form className="flex flex-col justify-between w-full h-[16%] rounded-md drop-shadow-md">
+                    <input type="text" className="w-[full] h-[55%] rounded-md bg-white/90 text-black text-center" placeholder="Type your message here..." value={newMessage}
                     onChange={(e)  => setNewMessage(e.target.value)}
                     onKeyDown={handleKeyDown}/>
-                    <button type="submit" className="w-[full] h-[30px] rounded-xl bg-indigo-700 text-white/90 text-center font-semibold"
+                    <button type="submit" className="w-[full] h-[38%] rounded-md bg-indigo-700 text-white/90 text-center font-semibold"
                     onClick={(e) => {
                         e.preventDefault();
                         handleNewMsg()}}>SEND</button>

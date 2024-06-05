@@ -25,7 +25,7 @@ const MemberList = ({ token, currentLobby }) => {
     return (
         <>
         {lobbyMembers.map((member, index) => (
-            <p key={index} className="text-indigo-800/80 font-bold bg-indigo-100 rounded-lg p-1 my-1">{member.username}</p>
+            <p key={index} className="text-indigo-800/80 w-[98%] font-bold bg-indigo-100 rounded-lg p-1 my-1">{member.username}</p>
         ))}
         </>
     )

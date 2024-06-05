@@ -50,11 +50,11 @@ const NavBar = ({ token }) => {
     }
 
   return (
-    <nav className="bg-indigo-800 flex justify-end fixed z-[50] w-full bg-opacity-90 drop-shadow-lg">
+    <nav className="bg-indigo-800 flex justify-end fixed z-[50] w-full h-[9%] bg-opacity-90 drop-shadow-lg">
       <div className="flex items-center justify-end mr-6">
-        <button onClick={handleCreate} className="bg-sky-700 text-white font-semibold rounded px-4 py-2 m-3 cursor-pointer">Create Lobby</button>
-        <button onClick={showAllUsers} className="bg-sky-700 text-white font-semibold rounded px-4 py-2 m-3 cursor-pointer">See all users</button>
-        <button onClick={handleLogOut} className="bg-sky-700 text-white font-semibold rounded px-4 py-2 m-3 cursor-pointer">Log out</button>
+        <button onClick={handleCreate} className="bg-sky-700 text-white font-semibold rounded px-4 py-2 mx-2 cursor-pointer">Create Lobby</button>
+        <button onClick={showAllUsers} className="bg-sky-700 text-white font-semibold rounded px-4 py-2 mx-2 cursor-pointer">See all users</button>
+        <button onClick={handleLogOut} className="bg-sky-700 text-white font-semibold rounded px-4 py-2 mx-2 cursor-pointer">Log out</button>
       </div>
     </nav>
   );

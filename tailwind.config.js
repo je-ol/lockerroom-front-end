@@ -8,7 +8,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Ubuntu", "sans-serif"],
-      }
+      },
+      screens: {
+        'sm': {'raw': '(max-height: 620px)'},
+      },
     },
   },
   plugins: [],
