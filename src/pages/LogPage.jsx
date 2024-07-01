@@ -39,7 +39,7 @@ const LogPage = ({ setUser }) => {
   };
 
   return (
-    <div className="h-[100vh] flex justify-center items-center">
+    <div className="h-[100vh] flex flex-col justify-center items-center">
       <form className="flex flex-col justify-center p-10 h-[400px] w-[400px] bg-white/20 rounded-3xl drop-shadow-xl">        
         <h1 className="text-white text-4xl font-bold text-center my-4 drop-shadow-lg">Welcome back!</h1>
         <input type="email" className="p-2 rounded text-black/80 font-medium my-4 drop-shadow-md" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
@@ -51,6 +51,7 @@ const LogPage = ({ setUser }) => {
         <p className="text-white font-semibold text-center">Not a member yet? 
         <Link to="/Register" className="underline text-sky-200"> Register</Link></p>
       </form>
+      <p className="text-white/50">email: visitor@email.com password: 1234</p>
         
     </div>
   );
